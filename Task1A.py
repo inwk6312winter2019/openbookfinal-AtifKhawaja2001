@@ -55,6 +55,8 @@ def lower(book1,book2,book3):
 
 	sorted_list(res1,res2,res3,d1,d2,d3)
 
+	common_words(d1,d2,d3)
+
 def unique_words(d1,d2,d3):
 	for keys in d1:
 		print(keys)
@@ -140,5 +142,15 @@ def character_word_count(res1,res2,res3):
                 d3.setdefault(word,val)
 	print(d3)
 
+def common_words(d1,d2,d3):
+	s1 = set(d1).intersection(set(d2))
+	s2 = s1.intersection(set(d3))
+
+	l = []
+	for keys in s2:
+		l.append(keys)
+
+	for i in range(20):
+		print("The 20 most common words = ",l[i])
 
 lower('Book1.txt','Book2.txt','Book3.txt')
