@@ -51,9 +51,29 @@ def lower(book1,book2,book3):
 
 	unique_words(d1,d2,d3)
 
+	count_the_article(res1,res2,res3)
+
 def unique_words(d1,d2,d3):
 	for keys in d1:
 		print(keys)
+
+
+def count_the_article(res1,res2,res3):
+	c1 = 0
+	for i in res1:
+		c1 = c1+1
+	print("The total number of words in Book1 = ",c1)
+
+	c2 = 0
+	for i in res2:
+		c2 = c2+1
+	print("The total number of words in Book2 = ",c2)
+
+	c3 = 0
+	for i in res3:
+		c3 = c3+1
+	print("The total number of words in Book3 = ",c3)
+
 
 
 lower('Book1.txt','Book2.txt','Book3.txt')
