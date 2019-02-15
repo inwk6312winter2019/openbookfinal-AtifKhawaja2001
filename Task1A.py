@@ -117,4 +117,28 @@ def sorted_list(res1,res2,res3,d1,d2,d3):
 
 	print(sub3)
 
+def character_word_count(res1,res2,res3):
+
+	d1 =  {}
+	for word in res1:
+                d1[word] = d1.get(word,0) + 1
+                val = d1[word]
+                d1.setdefault(word,val)
+	print(d1)
+
+	d2 = {}
+	for word in res2:
+                d2[word] = d2.get(word,0) + 1
+                val = d2[word]
+                d2.setdefault(word,val)
+	print(d2)
+
+	d3 = {}
+	for word in res3:
+                d3[word] = d3.get(word,0) + 1
+                val = d3[word]
+                d3.setdefault(word,val)
+	print(d3)
+
+
 lower('Book1.txt','Book2.txt','Book3.txt')
